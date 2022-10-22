@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+
+
+
+
+<title>Alex Cayley</title>
+
+<link rel="stylesheet" href="./style.css">
+
+
+
+
+</head>
+<body>
+    <div id="arrow" class="arrow bounce"></div>
+
+    <div id="mySidebar" class="sidebar">
+        <br>
+        <a href="#">ABOUT ME</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">PERSONAL WORK</a>
+        <a href="#">CONTACT</a>
+      </div>
+
+<div id="main">
+    <a class="McButton" data="hamburger-menu" id="McButton" onclick="toggleNav()">
+        <b></b>
+        <b></b>
+        <b></b>
+      </a>
+    </div>
+    
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
+
+
+<script>
+
+var isOpen = false;
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  isOpen = true;
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  isOpen = false;
+}
+
+var btn = document.getElementById('McButton');
+
+btn.addEventListener('click', function() {
+  if (isOpen) {
+    closeNav();  
+  } else {
+    openNav();
+  }
+}, false);
+
+  </script>
+
+<style>
+    /*DOWN ARROW*/
+    .arrow
+{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  
+    
+    
+    
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MTIiIGlkPSJzdmcyIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzIGlkPSJkZWZzNCIvPjxnIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsLTU0MC4zNjIyKSI+PHBhdGggZD0ibSAxMjcuNDA2MjUsNjU3Ljc4MTI1IGMgLTQuOTg1MywwLjA3ODQgLTkuOTEwNzcsMi4xNjMwOCAtMTMuNDM3NSw1LjY4NzUgbCAtNTUsNTUgYyAtMy42MDA1NjUsMy41OTkyNyAtNS42OTY4ODMsOC42NTg5NSAtNS42OTY4ODMsMTMuNzUgMCw1LjA5MTA1IDIuMDk2MzE4LDEwLjE1MDczIDUuNjk2ODgzLDEzLjc1IEwgMjQyLjI1LDkyOS4yNSBjIDMuNTk5MjcsMy42MDA1NiA4LjY1ODk1LDUuNjk2ODggMTMuNzUsNS42OTY4OCA1LjA5MTA1LDAgMTAuMTUwNzMsLTIuMDk2MzIgMTMuNzUsLTUuNjk2ODggTCA0NTMuMDMxMjUsNzQ1Ljk2ODc1IGMgMy42MDA1NiwtMy41OTkyNyA1LjY5Njg4LC04LjY1ODk1IDUuNjk2ODgsLTEzLjc1IDAsLTUuMDkxMDUgLTIuMDk2MzIsLTEwLjE1MDczIC01LjY5Njg4LC0xMy43NSBsIC01NSwtNTUgYyAtMy41OTgxNSwtMy41OTEyNyAtOC42NTA2OCwtNS42ODEyNyAtMTMuNzM0MzgsLTUuNjgxMjcgLTUuMDgzNjksMCAtMTAuMTM2MjIsMi4wOSAtMTMuNzM0MzcsNS42ODEyNyBMIDI1Niw3NzguMDMxMjUgMTQxLjQzNzUsNjYzLjQ2ODc1IGMgLTMuNjY2NzgsLTMuNjY0MjMgLTguODQ4MDEsLTUuNzY0NDIgLTE0LjAzMTI1LC01LjY4NzUgeiIgaWQ9InBhdGgzNzY2LTEiIHN0eWxlPSJmb250LXNpemU6bWVkaXVtO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc3RyZXRjaDpub3JtYWw7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO2xpbmUtaGVpZ2h0Om5vcm1hbDtsZXR0ZXItc3BhY2luZzpub3JtYWw7d29yZC1zcGFjaW5nOm5vcm1hbDt0ZXh0LXRyYW5zZm9ybTpub25lO2RpcmVjdGlvbjpsdHI7YmxvY2stcHJvZ3Jlc3Npb246dGI7d3JpdGluZy1tb2RlOmxyLXRiO3RleHQtYW5jaG9yOnN0YXJ0O2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO2NvbG9yOiMwMDAwMDA7ZmlsbDojMjIyMjIyO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDozOC44ODAwMDEwNzttYXJrZXI6bm9uZTt2aXNpYmlsaXR5OnZpc2libGU7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlO2ZvbnQtZmFtaWx5OlNhbnM7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpTYW5zIi8+PC9nPjwvc3ZnPg==);
+  background-size: contain;
+
+  
+}
+
+
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+</style>
+
+<style>
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(237, 236, 236); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  box-shadow: 10px 10px 20px #F4F4F4;
+}
+
+/* The sidebar links */
+.sidebar a {
+  text-decoration: none;
+  font-size: 36px;
+  padding: 8px 8px 8px 32px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: 'Signika Negative', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #696868;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+</style>
+
+
+<script>
+//hover over mcbutton
+$(function() {
+  $('#McButton').hover(function() {
+    $('#McButton b').css('background-color', '#696868');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('#McButton b').css('background-color', 'black');
+  });
+});
+
+</script>
+<style>
+
+        
+
+
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+
+#container {
+	text-align: center;
+    position:absolute;
+    top:40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+
+.toptexts2 {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    }
+    
+@keyframes fadeEffect { /* from 0 to full opacity */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+#toptexts2 {
+	text-align: center;
+    position:absolute;
+    top:55%;
+    
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+.toptexts3 {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    
+    }
+    
+
+
+
+
+
+#toptexts3 {
+	text-align: center;
+    position:absolute;
+    top:70%;
+    
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+#textstuff {
+	text-align: center;
+    position: absolute;
+    top:120%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+    
+	color: black;
+	letter-spacing: 2px;
+
+    font-family: Libre;
+    font-size: 120px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 120px;
+	background-color: black;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: black; 
+	}
+}
+</style>
+
+
+
+    <div id="container">
+        <div id="text"></div><div id="cursor"></div>
+    </div>
+
+    <div class="toptexts2" id="toptexts2">
+        
+        <div id="text">
+        <div>i'm a designer.</div>
+        </div>
+
+    </div>
+
+    <div class="toptexts3" id="toptexts3">
+        
+        <div id="text">
+        <div>i'm an engineer.</div>
+        </div>
+
+    </div>
+
+    <div id="textstuff">
+        <div id="text">
+        <div style="color: white;">ok!</div>
+        </div>
+    </div>
+
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById("toptexts2").style.display = "none";
+        document.getElementById("toptexts3").style.display = "none";
+        document.getElementById("McButton").style.display = "none";
+       
+
+        
+        
+
+    </script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+         window.addEventListener("scroll", function() {showFunction3()});
+
+        function showFunction3() {
+            if ((document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) && (counter === 9)) {
+                document.getElementById("cursor").style.display = "none";
+                //PUT ARROW HERE!
+            } else {
+               
+            }
+        }
+
+        
+
+        window.addEventListener("scroll", function() {showFunction()});
+        function showFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                document.getElementById("toptexts2").style.display = "block";
+                document.getElementById("McButton").style.display = "block";
+            } else {
+               // document.getElementById("toptexts2").style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", function() {showFunction2()});
+        let opacity = 1
+        function showFunction2() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("toptexts3").style.display = "block";
+
+               //console.log(document.getElementById("arrow").style.opacity)
+                
+                if (opacity>0) {
+                    opacity = opacity - 0.05;
+                    document.getElementById("arrow").style.opacity=opacity;
+                    //console.log(opacity)
+                
+                }
+                    //document.getElementById("arrow").style.display = "none";
+                    
+                
+        
+            } else {
+               // document.getElementById("toptexts3").style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        // List of sentences
+    var _CONTENT = [ 
+        "hi there.", 
+        "i'm alex."
+    ];
+    
+    // Current sentence being processed
+    var _PART = 0;
+    
+    // Character number of the current sentence being processed 
+    var _PART_INDEX = 0;
+    
+    // Holds the handle returned from setInterval
+    var _INTERVAL_VAL;
+    
+    // Element that holds the text
+    var _ELEMENT = document.querySelector("#text");
+    
+    // Cursor element 
+    var _CURSOR = document.querySelector("#cursor");
+    
+    document.getElementById("arrow").style.visibility = "hidden";
+
+    // Implements typing effect
+    function Type() { 
+        // Get substring with 1 characater added
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+    
+        // If full sentence has been displayed then start to delete the sentence after some time
+        if(text === _CONTENT[_PART]) {
+            // Hide the cursor
+            //_CURSOR.style.display = 'none';
+    
+            clearInterval(_INTERVAL_VAL);
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Delete, 50);
+            }, 1000);
+        }
+        
+    }
+    let counter = 0;
+    // Implements deleting effect
+
+    
+       
+        
+
+    function Delete() {
+        
+        
+
+        if(counter < 9) {
+        // Get substring with 1 characater deleted
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+        counter = counter + 1;
+
+       
+        // If sentence has been deleted then start to display the next sentence
+        if(text === '') {
+            clearInterval(_INTERVAL_VAL);
+            // If current sentence was last then display the first one, else move to the next
+            if(_PART == (_CONTENT.length - 1))
+                _PART = 0;
+            else
+                _PART++;
+            
+            _PART_INDEX = 0;
+    
+            // Start to display the next sentence after some time
+            setTimeout(function() {
+                _CURSOR.style.display = 'inline-block';
+                _INTERVAL_VAL = setInterval(Type, 100);
+            }, 200);
+        }
+    }
+        
+        
+    
+    }
+    
+            switch (counter) {
+        case 0:
+            
+            break;
+        case 9:
+            
+            break;
+        }
+
+        
+        
+
+        //while (counter < 9) {
+            
+            //document.getElementById("arrow").style.visibility = "hidden";
+                //PUT ARROW HERE!
+            //}
+
+    setTimeout(function() {
+    // Start the typing effect on load
+    _INTERVAL_VAL = setInterval(Type, 150);
+    }, 2000);
+
+    
+
+    
+    </script>
+    <script>
+         document.getElementById("arrow").style.visibility = "hidden";
+
+         window.onload = function(){
+        setTimeout(loadAfterTime, 6400)
+        };
+
+
+        function loadAfterTime() { 
+            document.getElementById("arrow").style.visibility = "visible";
+            //$("arrow").fadeOut();
+        }
+       
+
+       
+    </script>
+    
+</body>
+</html>

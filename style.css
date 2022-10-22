@@ -1,0 +1,48 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+/* Hamburger Menu */
+.McButton {
+  position: fixed;
+  top: 5%;
+  left: 3%;
+  margin-left: -22px;
+  margin-top: -22px;
+  width: 44px;
+  height: 33px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.McButton {
+  animation: fadeEffect 3s; /* fading effect takes 3s */
+}
+
+
+@keyframes fadeEffect { /* from 0 to full opacity */
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+.McButton b {
+  position: absolute;
+  left: 0;
+  width: 44px;
+  height: 3px;
+  background-color: black;
+}
+.McButton b:nth-child(1) {
+  top: 0;
+}
+.McButton b:nth-child(2) {
+  top: 50%;
+}
+.McButton b:nth-child(3) {
+  top: 100%;
+}
+
+
+/* McButton */
