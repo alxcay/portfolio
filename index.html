@@ -68,6 +68,48 @@ btn.addEventListener('click', function() {
   </script>
 
 <style>
+/*bigpic*/
+.float-container {
+  
+  position:absolute;
+  left: 50%;
+        /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  top: 95%;
+
+  display: inline-flex;
+  white-space: nowrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  animation: fadeEffect 3s;
+}
+
+.float-child {
+    width: 150%;
+    text-align: center;
+    
+    
+    padding: 0px;
+    letter-spacing: 2px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 9px;
+    margin-right: 9px;
+    
+
+    /*font-family: Libre;*/
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 120px;
+    
+    
+}  
+
+</style>
+<style>
     /*DOWN ARROW*/
     .arrow
 {
@@ -185,6 +227,7 @@ $(function() {
 
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
 #container {
 	text-align: center;
@@ -193,7 +236,6 @@ $(function() {
     bottom: 0;
     left: 0;
     right: 0;
-    
     margin: auto;
 }
 
@@ -224,8 +266,6 @@ $(function() {
        animation: fadeEffect 3s; /* fading effect takes 3s */
     
     }
-    
-
 
 
 
@@ -260,7 +300,8 @@ $(function() {
 	color: black;
 	letter-spacing: 2px;
 
-    font-family: Libre;
+    /*font-family: Libre;*/
+    font-family: 'IM Fell DW Pica', serif;
     font-size: 120px;
 }
 
@@ -311,6 +352,18 @@ $(function() {
         </div>
     </div>
 
+    <div id="floatcontainer" class="float-container">
+
+      <div id="ic" class="float-child">
+        <div class="green">i see the</div>
+      </div>
+      
+      <div class="float-child">
+        <div id="bigpic" class="blue">big picture.</div>
+      </div>
+      
+    </div>
+
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
@@ -319,8 +372,8 @@ $(function() {
         document.getElementById("toptexts2").style.display = "none";
         document.getElementById("toptexts3").style.display = "none";
         document.getElementById("McButton").style.display = "none";
-       
-
+        document.getElementById("floatcontainer").style.display = "none";
+        
         
         
 
@@ -375,7 +428,88 @@ $(function() {
                // document.getElementById("toptexts3").style.display = "none";
             }
         }
+
+        window.addEventListener("scroll", function() {showFunction4()});
+        function showFunction4() {
+            if (document.body.scrollTop > 190 || document.documentElement.scrollTop > 190) {
+                document.getElementById("floatcontainer").style.display = "inline-flex";
+                i
+               //console.log(document.getElementById("arrow").style.opacity)
+                
+                
+                    //document.getElementById("arrow").style.display = "none";
+                    
+                
+            } else {
+               // document.getElementById("toptexts3").style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", function() {showFunction5()});
+       let fontsize = 120
+        function showFunction5() {
+            if (document.body.scrollTop > 210 || document.documentElement.scrollTop > 210) {
+                document.getElementById("floatcontainer").style.display = "inline-flex";
+                if (fontsize < 130) {
+                  fontsize = fontsize +.1;
+                  actfont = fontsize + "px";
+                  document.getElementById("bigpic").style.fontSize = actfont;
+                  console.log(document.getElementById("bigpic").style.fontSize)
+                }
+               //console.log(document.getElementById("arrow").style.opacity)
+                
+                
+                    //document.getElementById("arrow").style.display = "none";
+                    
+                
+            } else {
+               // document.getElementById("toptexts3").style.display = "none";
+            }
+        }
     </script>
+  <!-- <a onclick="scrolldown()">Click Me to Smooth Scroll to Section 2 Below</a> -->
+   
+  <script>
+    function scrolldown()
+        {
+          let n = 0
+          setTimeout(function() {
+            while (n<50) {
+            n = n + .1;
+            window.scrollTo(0, n);
+          console.log(n)
+         } 
+        }, 1000);
+          
+        }
+  </script>
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
     <script>
         // List of sentences
     var _CONTENT = [ 
