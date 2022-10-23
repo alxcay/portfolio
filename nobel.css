@@ -1,0 +1,52 @@
+/*
+This CSS resource incorporates links to font software which is 
+the valuable copyrighted property of WebType LLC, The Font Bureau 
+and/or their suppliers. You may not 
+attempt to copy, install, redistribute, convert, modify or reverse 
+engineer this font software. Please contact WebType with any 
+questions: http://www.webtype.com 
+*/
+@font-face {
+    font-family: 'NobelWGLRegular';
+    src: url('Nobel-WGL-Regular/52a74df6-e4a6-46a1-aad9-d11ac548979c-2.eot');
+    src: url('Nobel-WGL-Regular/52a74df6-e4a6-46a1-aad9-d11ac548979c-2.eot?') format('embedded-opentype'),
+         url('Nobel-WGL-Regular/52a74df6-e4a6-46a1-aad9-d11ac548979c-3.woff') format('woff'),
+         url('Nobel-WGL-Regular/52a74df6-e4a6-46a1-aad9-d11ac548979c-1.ttf') format('truetype'),
+         url('Nobel-WGL-Regular/52a74df6-e4a6-46a1-aad9-d11ac548979c-4.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: "NobelWGLBold";
+  src: url("Nobel-WGL-Bold/57cb1bf5-0b0a-4fb9-8cfc-8066315b2533-2.eot");
+  src: url("Nobel-WGL-Bold/57cb1bf5-0b0a-4fb9-8cfc-8066315b2533-2.eot?") format("embedded-opentype"),
+       url("Nobel-WGL-Bold/57cb1bf5-0b0a-4fb9-8cfc-8066315b2533-3.woff") format("woff"),
+       url("Nobel-WGL-Bold/57cb1bf5-0b0a-4fb9-8cfc-8066315b2533-1.ttf") format("truetype"),
+       url("Nobel-WGL-Bold/57cb1bf5-0b0a-4fb9-8cfc-8066315b2533-4.svg") format("svg");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "NobelWGLBook";
+  src: url("Nobel-WGL-Book/c356ba49-ccdf-4d7a-a95d-a4feb5eea7ea-2.eot");
+  src: url("Nobel-WGL-Book/c356ba49-ccdf-4d7a-a95d-a4feb5eea7ea-2.eot?") format("embedded-opentype"),
+       url("Nobel-WGL-Book/c356ba49-ccdf-4d7a-a95d-a4feb5eea7ea-3.woff") format("woff"),
+       url("Nobel-WGL-Book/c356ba49-ccdf-4d7a-a95d-a4feb5eea7ea-1.ttf") format("truetype"),
+       url("Nobel-WGL-Book/c356ba49-ccdf-4d7a-a95d-a4feb5eea7ea-4.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "NobelWGLLight";
+  src: url("Nobel-WGL-Light/81ee9e6f-18a9-46f7-b078-ca4e4be93eb5-2.eot");
+  src: url("Nobel-WGL-Light/81ee9e6f-18a9-46f7-b078-ca4e4be93eb5-2.eot?") format("embedded-opentype"),
+       url("Nobel-WGL-Light/81ee9e6f-18a9-46f7-b078-ca4e4be93eb5-3.woff") format("woff"),
+       url("Nobel-WGL-Light/81ee9e6f-18a9-46f7-b078-ca4e4be93eb5-1.ttf") format("truetype"),
+       url("Nobel-WGL-Light/81ee9e6f-18a9-46f7-b078-ca4e4be93eb5-4.ttf") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
