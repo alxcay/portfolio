@@ -88,6 +88,7 @@ btn.addEventListener('click', function() {
   margin-right: 0px;
 
   animation: fadeEffect 3s;
+  /* opacity: 0; */
 }
 
 #floatcontainer2 {
@@ -655,7 +656,7 @@ $(function() {
     </script>
 
     
-  <!-- <a onclick="scrolldown()">Click Me to Smooth Scroll to Section 2 Below</a> -->
+  <a>Click Me to Smooth Scroll to Section 2 Below</a>
    
   <script>
     function scrolldown()
@@ -687,7 +688,8 @@ $(function() {
           // Using jQuery's animate() method to add smooth page scroll
           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
-            scrollTop: $(hash).offset().top
+            //scrollTop: $(hash).offset().top
+            body.scrollTo(0,50);
           }, 800, function(){
        
             // Add hash (#) to URL when done scrolling (default click behavior)
@@ -788,11 +790,7 @@ $(function() {
         
         
 
-        //while (counter < 9) {
-            
-            //document.getElementById("arrow").style.visibility = "hidden";
-                //PUT ARROW HERE!
-            //}
+        
 
     setTimeout(function() {
     // Start the typing effect on load
