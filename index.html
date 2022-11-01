@@ -171,7 +171,10 @@ btn.addEventListener('click', function() {
 }
 
 #smalldet {
-  font-size:15vmin
+  font-size:15vmin;
+  /* margin-top: 1vmin; */
+  transform: translateY(25%);
+
 }
 
 #dot4 {
@@ -444,27 +447,38 @@ $(function() {
           //for future version -- dynamically adjust h based on active resizing of window. (addEventListener?)
           var h = window.innerHeight;
 
-          
-          console.log(h);
-
+    
          window.addEventListener("scroll", function() {showFunction3()});
 
         function showFunction3() {
             if ((document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) && (counter === 9)) {
                 document.getElementById("cursor").style.display = "none";
+                
                 //PUT ARROW HERE!
             } else {
                
             }
         }
 
-        
+        window.addEventListener("scroll", function() {showburger()});
+
+        function showburger() {
+            if ((document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)) {
+              document.getElementById("McButton").style.display = "block";
+                
+                //PUT ARROW HERE!
+            } else {
+               
+            }
+        }
+
+
 
         window.addEventListener("scroll", function() {showFunction()});
         function showFunction() {
             if (document.body.scrollTop > h/3.5 || document.documentElement.scrollTop > h/3.5) {
                 document.getElementById("line2").style.display = "block";
-                document.getElementById("McButton").style.display = "block";
+                
             } else {
                // document.getElementById("toptexts2").style.display = "none";
             }
@@ -596,7 +610,7 @@ $(function() {
                 document.getElementById("floatcontainer2").style.display = "inline-flex";
                 
                 if (fontsize2 > 10 ) {
-                  fontsize2 = fontsize2 -.01;
+                  fontsize2 = fontsize2 -.06;
                   actfont2 = fontsize2 + "vmin";
                   document.getElementById("smalldet").style.fontSize = actfont2;
                   
