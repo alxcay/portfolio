@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alex Cayley</title>
+
+<link rel="stylesheet" href="./style.css">
+
+<link rel="stylesheet" href="https://use.typekit.net/fbt8vdb.css">
+
+<link rel="stylesheet" href="./sidebarstyle.css">
+
+<!-- <link rel="stylesheet" href="./imagestyle.css"> -->
+
+</head>
+<body>
+
+  
+  <div class="parallax">
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <img src="AboutME.png" id="mepic" alt="me:)">
+        <p id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus nibh nec lobortis tempor. Nulla viverra aliquet mauris sit amet lobortis. Pellentesque iaculis erat nunc, at ultrices mauris vulputate sit amet. Nunc commodo tortor ut libero cursus, ut fermentum justo convallis. Praesent condimentum orci odio, quis vulputate diam ornare nec. Duis faucibus metus diam. Nunc vel fermentum dolor.
+
+      </div>
+      <!-- <div class="parallax__layer parallax__layer--base" id="frontpic">
+      <img src="AboutME2.png" id="mepic2" alt="me:)">
+    </div> -->
+    </div>
+
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--front">
+        <div id="title">Hey there,<br> I'm Alex.</div>
+        
+      </div>
+      </div>
+
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <img src="AboutME2.png" id="mepic" alt="me:)" style="z-index: 99999;">
+      </div>
+      <!-- <div class="parallax__layer parallax__layer--base" id="frontpic">
+      <img src="AboutME2.png" id="mepic2" alt="me:)">
+    </div> -->
+    </div>
+    
+    
+
+      </div>
+
+
+        Sed dignissim ipsum cursus risus suscipit, et laoreet sem lobortis. Etiam ac fringilla sapien. Nulla vel metus tortor. Nullam molestie velit eget ipsum aliquam dapibus. Curabitur feugiat massa blandit arcu efficitur ullamcorper. In placerat tortor leo, nec gravida lectus suscipit sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam at elit ac eros sodales placerat sed sit amet quam. Duis eu magna scelerisque, vestibulum dolor at, tristique lectus.</p>
+      <style>
+        body{
+          overflow: hidden; /* Hide scrollbars */
+        }
+        .parallax {
+        height: 500px; /* fallback for older browsers */
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-perspective: 300px;
+        perspective: 300px;
+        
+      }
+      .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 3;
+  }
+
+  .parallax__layer--front {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 4;
+    top: 75%;
+    left: 33%;
+    width:70%
+    
+    
+  }
+  
+  #group2 {
+    z-index: 9999;
+    transform: translateY(-200%);
+  }
+  
+  #intro{
+    position:static;
+    margin-top: 130vmin;
+    color: black;
+    font-size: 5vmin;
+    z-index: 99;
+    width: 80%;
+    text-align: center;
+    transform: translateX(15%);
+  }
+  </style>
+
+    <div id="mySidebar" class="sidebar">
+        <br>
+        <br>
+        <a href="#">ABOUT ME</a>
+        <br>
+        <a href="#">PORTFOLIO</a>
+        <br>
+        <a href="#">PERSONAL</a>
+        <br>
+        <a href="#">CONTACT</a>
+      </div>
+
+
+      <!-- <figure class="image-container">
+      <img src="AboutME.png" id="mepic" alt="me:)">
+      <img src="AboutME2.png" id="mepic2" alt="me:)">
+      </figure> -->
+      <!-- <div id="title">Hey there, I'm Alex.</div> -->
+
+      <div id="textstuff">test</div>
+
+<div id="main">
+    <a class="McButton" data="hamburger-menu" id="McButton" onclick="toggleNav()">
+        <b></b>
+        <b></b>
+        <b></b>
+      </a>
+    </div>
+    
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
+
+<!-- Sidebar Functionality -->
+<script>
+
+var isOpen = false;
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  isOpen = true;
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  isOpen = false;
+}
+
+var btn = document.getElementById('McButton');
+
+btn.addEventListener('click', function() {
+  if (isOpen) {
+    closeNav();  
+  } else {
+    openNav();
+  }
+}, false);
+
+  </script>
+
+<style>
+
+  #title {
+    position:absolute;
+    font-size: 35vmin;
+    font-family: 'Bebas Neue', cursive;
+    
+    line-height: 33vmin;
+    text-align: right;
+    white-space: nowrap    
+  }
+  #mepic {
+    position:absolute;
+    top: 10%;
+    left: 10%;
+    width: 60vmin;
+  }
+
+
+  #mepic2 {
+    position:absolute;
+    top: 10%;
+    left: 10%;
+    width: 60vmin;
+    z-index: 99;
+  }
+
+  #maintextcontainer {
+    scroll-behavior: smooth;
+  }
+/*bigpic*/
+
+
+
+.float-container {
+  
+  position:absolute;
+  left: 50%;
+        /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  top: 200%;
+
+  display: inline-flex;
+  white-space: nowrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  animation: fadeEffect 3s;
+  /* opacity: 0; */
+}
+
+#floatcontainer2 {
+  
+  position:absolute;
+  left: 50%;
+        /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  top: 240%;
+
+  display: inline-flex;
+  white-space: nowrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  animation: fadeEffect 3s;
+}
+
+.float-child {
+    width: 150%;
+    text-align: center;
+    
+    
+    padding: 0px;
+    letter-spacing: 2px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 9px;
+    margin-right: 9px;
+    
+
+    /*font-family: Libre;*/
+    /* font-family: 'IM Fell DW Pica', serif; */
+    font-family: 'Bebas Neue', cursive;
+
+    font-size: 20vmin;
+
+   
+
+    
+    
+}  
+
+.siderbar{
+  box-shadow: 10px 10px 20px #454545;
+}
+
+
+    /*DOWN ARROW*/
+    .arrow
+{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  
+    
+    
+    
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MTIiIGlkPSJzdmcyIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzIGlkPSJkZWZzNCIvPjxnIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsLTU0MC4zNjIyKSI+PHBhdGggZD0ibSAxMjcuNDA2MjUsNjU3Ljc4MTI1IGMgLTQuOTg1MywwLjA3ODQgLTkuOTEwNzcsMi4xNjMwOCAtMTMuNDM3NSw1LjY4NzUgbCAtNTUsNTUgYyAtMy42MDA1NjUsMy41OTkyNyAtNS42OTY4ODMsOC42NTg5NSAtNS42OTY4ODMsMTMuNzUgMCw1LjA5MTA1IDIuMDk2MzE4LDEwLjE1MDczIDUuNjk2ODgzLDEzLjc1IEwgMjQyLjI1LDkyOS4yNSBjIDMuNTk5MjcsMy42MDA1NiA4LjY1ODk1LDUuNjk2ODggMTMuNzUsNS42OTY4OCA1LjA5MTA1LDAgMTAuMTUwNzMsLTIuMDk2MzIgMTMuNzUsLTUuNjk2ODggTCA0NTMuMDMxMjUsNzQ1Ljk2ODc1IGMgMy42MDA1NiwtMy41OTkyNyA1LjY5Njg4LC04LjY1ODk1IDUuNjk2ODgsLTEzLjc1IDAsLTUuMDkxMDUgLTIuMDk2MzIsLTEwLjE1MDczIC01LjY5Njg4LC0xMy43NSBsIC01NSwtNTUgYyAtMy41OTgxNSwtMy41OTEyNyAtOC42NTA2OCwtNS42ODEyNyAtMTMuNzM0MzgsLTUuNjgxMjcgLTUuMDgzNjksMCAtMTAuMTM2MjIsMi4wOSAtMTMuNzM0MzcsNS42ODEyNyBMIDI1Niw3NzguMDMxMjUgMTQxLjQzNzUsNjYzLjQ2ODc1IGMgLTMuNjY2NzgsLTMuNjY0MjMgLTguODQ4MDEsLTUuNzY0NDIgLTE0LjAzMTI1LC01LjY4NzUgeiIgaWQ9InBhdGgzNzY2LTEiIHN0eWxlPSJmb250LXNpemU6bWVkaXVtO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc3RyZXRjaDpub3JtYWw7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO2xpbmUtaGVpZ2h0Om5vcm1hbDtsZXR0ZXItc3BhY2luZzpub3JtYWw7d29yZC1zcGFjaW5nOm5vcm1hbDt0ZXh0LXRyYW5zZm9ybTpub25lO2RpcmVjdGlvbjpsdHI7YmxvY2stcHJvZ3Jlc3Npb246dGI7d3JpdGluZy1tb2RlOmxyLXRiO3RleHQtYW5jaG9yOnN0YXJ0O2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO2NvbG9yOiMwMDAwMDA7ZmlsbDojMjIyMjIyO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDozOC44ODAwMDEwNzttYXJrZXI6bm9uZTt2aXNpYmlsaXR5OnZpc2libGU7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlO2ZvbnQtZmFtaWx5OlNhbnM7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpTYW5zIi8+PC9nPjwvc3ZnPg==);
+  background-size: contain;
+
+  
+}
+
+
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+</style>
+
+<style>
+
+</style>
+
+
+<script>
+//hover over mcbutton
+$(function() {
+  $('#McButton').hover(function() {
+    $('#McButton b').css('background-color', '#696868');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('#McButton b').css('background-color', 'black');
+  });
+});
+
+</script>
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+@keyframes fadeEffect { /* from 0 to full opacity */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.maintext {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    }
+
+
+
+#textstuff {
+	text-align: center;
+    position: absolute;
+    top:300%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 5vmin;
+    font-family: 'Cormorant Garamond', serif;
+    color: gray;
+    margin: auto;
+}
+
+
+</style>
+
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Scroll to 0,0 and Element hide initiation -->
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        
+
+    </script>
+    
+    <!-- Element FadeIN on Scroll + INCREASE SIZE -->
+    
+  
+    <!-- Typewriter Effect -->
+    
+
+    <!-- Scroll Down Arrow FadeIN -->
+    
+       
+
+       
+    </script>
+    
+    
+    </style>
+</body>
+</html>

@@ -21,7 +21,7 @@
     <div id="mySidebar" class="sidebar">
         <br>
         <br>
-        <a href="aboutme.html#">ABOUT ME</a>
+        <a href="#">ABOUT ME</a>
         <br>
         <a href="#">PORTFOLIO</a>
         <br>
@@ -88,7 +88,7 @@ btn.addEventListener('click', function() {
   left: 50%;
         /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  top: 200%;
+  top: 145%;
 
   display: inline-flex;
   white-space: nowrap;
@@ -107,7 +107,7 @@ btn.addEventListener('click', function() {
   left: 50%;
         /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  top: 240%;
+  top: 170%;
 
   display: inline-flex;
   white-space: nowrap;
@@ -173,7 +173,7 @@ btn.addEventListener('click', function() {
 #smalldet {
   font-size:15vmin;
   /* margin-top: 1vmin; */
-  transform: translateY(15%);
+  transform: translateY(25%);
 
 }
 
@@ -256,7 +256,6 @@ $(function() {
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 @keyframes fadeEffect { /* from 0 to full opacity */
     from {opacity: 0;}
@@ -270,7 +269,7 @@ $(function() {
 #line1 {
 	text-align: center;
     position:absolute;
-    top:30%;
+    top:40%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -280,7 +279,7 @@ $(function() {
 #line2 {
 	text-align: center;
     position:absolute;
-    top:80%;
+    top:70%;
     
     left: 0;
     right: 0;
@@ -292,7 +291,7 @@ $(function() {
 #line3 {
 	text-align: center;
     position:absolute;
-    top:130%;
+    top:100%;
     
     left: 0;
     right: 0;
@@ -300,7 +299,16 @@ $(function() {
     margin: auto;
 }
 
-
+#textstuff {
+	text-align: center;
+    position: absolute;
+    top:300%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
 
 
 #text {
@@ -314,19 +322,6 @@ $(function() {
     /* font-family: 'IM Fell DW Pica', serif; */
     font-family: 'Bebas Neue', cursive;
     font-size:30vmin;
-}
-
-#textstuff {
-	text-align: center;
-    position: absolute;
-    top:300%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 3vmin;
-    font-family: 'Cormorant Garamond', serif;
-    color: gray;
-    margin: auto;
 }
 
 #cursor {
@@ -373,9 +368,9 @@ $(function() {
     </div>
 
     <div id="textstuff">
-        
-        <div>made by me.</div>
-        
+        <div id="text">
+        <div style="color: white;">ok!</div>
+        </div>
     </div>
 
     <div id="floatcontainer" class="float-container">
@@ -481,7 +476,7 @@ $(function() {
 
         window.addEventListener("scroll", function() {showFunction()});
         function showFunction() {
-            if (document.body.scrollTop > h/5 || document.documentElement.scrollTop > h/5) {
+            if (document.body.scrollTop > h/3.5 || document.documentElement.scrollTop > h/3.5) {
                 document.getElementById("line2").style.display = "block";
                 
             } else {
@@ -517,26 +512,26 @@ $(function() {
             }
         }
 
-        // window.addEventListener("scroll", function() {showFunction4()});
-        // function showFunction4() {
-        //     if (document.body.scrollTop > h/0.07 || document.documentElement.scrollTop > h/0.07) {
-        //         document.getElementById("floatcontainer").style.display = "inline-flex";
+        window.addEventListener("scroll", function() {showFunction4()});
+        function showFunction4() {
+            if (document.body.scrollTop > h/1.3 || document.documentElement.scrollTop > h/1.3) {
+                document.getElementById("floatcontainer").style.display = "inline-flex";
                 
-        //        //console.log(document.getElementById("arrow").style.opacity)
+               //console.log(document.getElementById("arrow").style.opacity)
                 
                 
-        //             //document.getElementById("arrow").style.display = "none";
+                    //document.getElementById("arrow").style.display = "none";
                     
                 
-        //     } else {
-        //        // document.getElementById("toptexts3").style.display = "none";
-        //     }
-        // }
+            } else {
+               // document.getElementById("toptexts3").style.display = "none";
+            }
+        }
 
         window.addEventListener("scroll", function() {showFunction5()});
        let fontsize = 25
         function showFunction5() {
-            if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
+            if (document.body.scrollTop > h/1.3 || document.documentElement.scrollTop > h/1.3) {
                 document.getElementById("floatcontainer").style.display = "inline-flex";
                 if (fontsize < 30 ) {
                   fontsize = fontsize +.01;
@@ -560,7 +555,7 @@ $(function() {
 
         window.addEventListener("scroll", function() {showFunction6()});
         function showFunction6() {
-            if (document.body.scrollTop > h/0.9 || document.documentElement.scrollTop > h/0.9) {
+            if (document.body.scrollTop > h/1.1 || document.documentElement.scrollTop > h/1.1) {
                 document.getElementById("dot1").style.opacity = 1;
                 
                //console.log(document.getElementById("arrow").style.opacity)
@@ -576,7 +571,7 @@ $(function() {
 
         window.addEventListener("scroll", function() {showFunction7()});
         function showFunction7() {
-            if (document.body.scrollTop > h/0.8 || document.documentElement.scrollTop > h/0.8) {
+            if (document.body.scrollTop > h/1 || document.documentElement.scrollTop > h/1) {
                 document.getElementById("dot2").style.opacity = 1;
                 
                //console.log(document.getElementById("arrow").style.opacity)
@@ -592,7 +587,7 @@ $(function() {
 
           window.addEventListener("scroll", function() {showFunction8()});
         function showFunction8() {
-            if (document.body.scrollTop > h/0.7 || document.documentElement.scrollTop > h/0.7) {
+            if (document.body.scrollTop > h/0.9 || document.documentElement.scrollTop > h/0.9) {
                 document.getElementById("dot3").style.opacity = 1;
                 
                //console.log(document.getElementById("arrow").style.opacity)
@@ -611,7 +606,7 @@ $(function() {
         let fontsize2 = 15
         function showFunction9() {
           
-            if (document.body.scrollTop > h/0.7 || document.documentElement.scrollTop > h/0.7) {
+            if (document.body.scrollTop > h/0.9 || document.documentElement.scrollTop > h/0.9) {
                 document.getElementById("floatcontainer2").style.display = "inline-flex";
                 
                 if (fontsize2 > 10 ) {
