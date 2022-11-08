@@ -146,47 +146,47 @@ btn.addEventListener('click', function() {
 }  
 
 #ic{
-  font-size: 15vmin;
-  margin-top: 8vmin;
+  font-size: 8vmax;
+  margin-top: 3vmax;
 }
 
 #bigpic {
-  font-size: 25vmin;
+  font-size: 8vmax;
 }
 
 #dot1 {
-  font-size: 25vmin;
+  font-size: 8vmax;
 }
 
 #dot2 {
-  font-size: 25vmin;
+  font-size: 8vmax;
 }
 
 #dot3 {
-  font-size: 25vmin;
+  font-size: 8vmax;
 }
 
 #aswellas {
-  font-size: 15vmin;
+  font-size: 9vmax;
 }
 
 #smalldet {
-  font-size:15vmin;
+  font-size:11vmax;
   /* margin-top: 1vmin; */
   transform: translateY(15%);
 
 }
 
 #dot4 {
-  font-size: 15vmin;
+  font-size: 9vmax;
 }
 
 #dot5 {
-  font-size: 15vmin;
+  font-size: 9vmax;
 }
 
 #dot6 {
-  font-size: 15vmin;
+  font-size: 9vmax;
 }
 
 
@@ -313,7 +313,7 @@ $(function() {
     /*font-family: Libre;*/
     /* font-family: 'IM Fell DW Pica', serif; */
     font-family: 'Bebas Neue', cursive;
-    font-size:30vmin;
+    font-size:13vmax;
 }
 
 #textstuff {
@@ -534,13 +534,13 @@ $(function() {
         // }
 
         window.addEventListener("scroll", function() {showFunction5()});
-       let fontsize = 25
+       let fontsize = 8
         function showFunction5() {
             if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
                 document.getElementById("floatcontainer").style.display = "inline-flex";
-                if (fontsize < 30 ) {
-                  fontsize = fontsize +.01;
-                  actfont = fontsize + "vmin";
+                if (fontsize < 13 ) {
+                  fontsize = fontsize +.09;
+                  actfont = fontsize + "vmax";
                   document.getElementById("bigpic").style.fontSize = actfont;
                   document.getElementById("dot1").style.fontSize = actfont;
                   document.getElementById("dot2").style.fontSize = actfont;
@@ -608,15 +608,15 @@ $(function() {
 
           window.addEventListener("scroll", function() {showFunction9()});
         
-        let fontsize2 = 15
+        let fontsize2 = 9
         function showFunction9() {
           
             if (document.body.scrollTop > h/0.7 || document.documentElement.scrollTop > h/0.7) {
                 document.getElementById("floatcontainer2").style.display = "inline-flex";
                 
-                if (fontsize2 > 10 ) {
-                  fontsize2 = fontsize2 -.06;
-                  actfont2 = fontsize2 + "vmin";
+                if (fontsize2 > 3 ) {
+                  fontsize2 = fontsize2 -.15;
+                  actfont2 = fontsize2 + "vmax";
                   document.getElementById("smalldet").style.fontSize = actfont2;
                   
                   console.log(document.getElementById("smalldet").style.fontSize)
