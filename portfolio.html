@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio</title>
+
+<link rel="stylesheet" href="./style.css">
+
+<link rel="stylesheet" href="https://use.typekit.net/fbt8vdb.css">
+
+<link rel="stylesheet" href="./sidebarstyle.css">
+
+<!-- <link rel="stylesheet" href="./imagestyle.css"> -->
+
+</head>
+<body>
+  <!-- <div class="square"></div> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  
+  
+  
+
+      
+
+
+    <div id="mySidebar" class="sidebar">
+        <br>
+        <br>
+        <a href="aboutme.html#">ABOUT ME</a>
+        <br>
+        <a href="portfolio.html#"">PORTFOLIO</a>
+        <br>
+        <a href="#">PERSONAL</a>
+        <br>
+        <a href="#">CONTACT</a>
+      </div>
+
+    <div id="main">
+    <a class="McButton" data="hamburger-menu" id="McButton" onclick="toggleNav()">
+        <b></b>
+        <b></b>
+        <b></b>
+      </a>
+      </div>
+    
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
+
+<!-- Sidebar Functionality -->
+<script>
+
+var isOpen = false;
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  isOpen = true;
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  isOpen = false;
+}
+
+var btn = document.getElementById('McButton');
+
+btn.addEventListener('click', function() {
+  if (isOpen) {
+    closeNav();  
+  } else {
+    openNav();
+  }
+}, false);
+
+  </script>
+
+
+<!-- Gallery Style -->
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  
+  filter: drop-shadow(0px 0px .6rem #8d8d8d);
+    transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+  padding: 0;
+  opacity: .5;
+  position: relative;
+  overflow: hidden;
+}
+
+.content img {
+    object-fit: cover;
+    display: block;
+    transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+}
+
+.content:hover {
+    
+    filter: drop-shadow(0 0 .6rem #787878);
+    opacity: 1;
+  }
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-family:'Bebas Neue', cursive;
+  font-size: 28px;
+  border-radius: 30px;
+}
+
+.centered {
+  position: absolute;
+  display: inline;
+  text-align: center;
+  width: 100%;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family:'Bebas Neue', cursive;
+  font-weight: 700;
+  color: #626262;
+  transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+}
+
+
+
+.content:hover .centered{
+  color: white;
+  font-size:31px;
+}
+
+.content:hover img{
+  transform: scale(1.2);
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+  
+  
+  
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('cad')"> CAD & Renders</button>
+    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('people')"> People</button>
+  </div>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column cad cars">
+      <div class="content">
+        <img src="dispenser.png" alt="Mountains" style="width:100%">
+        <div class="centered">Smart pill dispenser</div>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="awards.jpg" alt="Lights" style="width:100%">
+      <div class="centered">Years of Service Awards</div>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+        <h4>Forest</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    
+    <div class="column cars">
+      <div class="content">
+        <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+        <h4>Retro</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+        <h4>Fast</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+        <h4>Classic</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+  
+    <div class="column people">
+      <div class="content">
+        <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
+        <h4>Girl</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column people">
+      <div class="content">
+      <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
+        <h4>Man</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+    <div class="column people">
+      <div class="content">
+      <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
+        <h4>Woman</h4>
+        <p>Lorem ipsum dolor..</p>
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+  
+  <!-- END MAIN -->
+  </div>
+  
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+<script>
+//hover over mcbutton
+$(function() {
+  $('#McButton').hover(function() {
+    $('#McButton b').css('background-color', '#696868');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('#McButton b').css('background-color', 'black');
+  });
+});
+
+</script>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+@keyframes fadeEffect { /* from 0 to full opacity */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.maintext {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    }
+
+
+
+
+</style>
+
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Scroll to 0,0 and Element hide initiation -->
+    
+    
+    <!-- Element FadeIN on Scroll + INCREASE SIZE -->
+    
+
+</body>
+</html>

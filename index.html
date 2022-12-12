@@ -5,6 +5,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
 <title>Alex Cayley</title>
 
 <link rel="stylesheet" href="./style.css">
@@ -23,11 +25,11 @@
         <br>
         <a href="aboutme.html#">ABOUT ME</a>
         <br>
-        <a href="#">PORTFOLIO</a>
+        <a href="portfolio.html">PORTFOLIO</a>
         <br>
         <a href="#">PERSONAL</a>
         <br>
-        <a href="#">CONTACT</a>
+        <a href="contact.html">CONTACT</a>
       </div>
 
 <div id="main">
@@ -491,8 +493,10 @@ $(function() {
         window.addEventListener("scroll", function() {arrowfunction()});
         let opacity = 1
         function arrowfunction() {
+          opac=document.body.scrollTop;
+          opac=document.documentElement.scrollTop;
           if (opacity>0) {
-                    opacity = opacity - 0.05;
+                    opacity = 1/opac;
                     document.getElementById("arrow").style.opacity=opacity;
                     //console.log(opacity)
                 
@@ -538,8 +542,10 @@ $(function() {
         function showFunction5() {
             if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
                 document.getElementById("floatcontainer").style.display = "inline-flex";
-                if (fontsize < 13 ) {
-                  fontsize = fontsize +.09;
+                fsize=document.body.scrollTop;
+                fsize=document.documentElement.scrollTop;
+                if (fsize <1350 ) {
+                  fontsize = fsize/90;
                   actfont = fontsize + "vmax";
                   document.getElementById("bigpic").style.fontSize = actfont;
                   document.getElementById("dot1").style.fontSize = actfont;
@@ -613,9 +619,10 @@ $(function() {
           
             if (document.body.scrollTop > h/0.7 || document.documentElement.scrollTop > h/0.7) {
                 document.getElementById("floatcontainer2").style.display = "inline-flex";
-                
+                fnt=document.body.scrollTop;
+                fnt=document.documentElement.scrollTop;
                 if (fontsize2 > 3 ) {
-                  fontsize2 = fontsize2 -.15;
+                  fontsize2 = 7000/fnt;
                   actfont2 = fontsize2 + "vmax";
                   document.getElementById("smalldet").style.fontSize = actfont2;
                   
