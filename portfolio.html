@@ -114,7 +114,8 @@ h1 {
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 0px;
+  margin-top: 0px;
 }
 
 /* Create three equal columns that floats next to each other */
@@ -142,7 +143,7 @@ h1 {
     -moz-animation:pop-in 0.5s;
     -ms-animation:pop-in 0.5s;
   padding: 0;
-  opacity: .5;
+  opacity: 1;
   position: relative;
   overflow: hidden;
 }
@@ -160,8 +161,9 @@ h1 {
 .content:hover {
     
     filter: drop-shadow(0 0 .6rem #787878);
-    opacity: 1;
+    /* opacity: .5; */
   }
+
 
 
 /* The "show" class is added to the filtered elements */
@@ -198,6 +200,7 @@ h1 {
     -webkit-animation:pop-in 0.5s;
     -moz-animation:pop-in 0.5s;
     -ms-animation:pop-in 0.5s;
+  opacity: 0;
 }
 
 
@@ -205,10 +208,13 @@ h1 {
 .content:hover .centered{
   color: white;
   font-size:31px;
+  opacity: 1;
 }
 
 .content:hover img{
-  transform: scale(1.2);
+  transform: scale(1.1);
+  opacity: 0.5;
+
 }
 
 .btn:hover {
@@ -230,77 +236,39 @@ h1 {
   
   
   <div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn active" style="margin-left: 60px" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('cad')"> CAD & Renders</button>
     <button class="btn" onclick="filterSelection('cars')"> Cars</button>
     <button class="btn" onclick="filterSelection('people')"> People</button>
   </div>
   
   <!-- Portfolio Gallery Grid -->
-  <div class="row">
+  <div class="row" style="margin-top:20px">
     <div class="column cad cars">
       <div class="content">
-        <img src="dispenser.png" alt="Mountains" style="width:100%">
-        <div class="centered">Smart pill dispenser</div>
+        <img src="VMwebthumb.png" alt="Mountains" style="width:100%">
+        <div class="centered">Penn State Vending Machine</div>
       </div>
     </div>
     <div class="column nature">
       <div class="content">
-      <img src="awards.jpg" alt="Lights" style="width:100%">
+      <img src="popitwebthumb.png" alt="Lights" style="width:100%">
+      <div class="centered">Pop-it Toy</div>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="crutchwebthumb.png" alt="Lights" style="width:100%">
+      <div class="centered">Crutch Redesign</div>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="trophywebthumb.png" alt="Lights" style="width:100%">
       <div class="centered">Years of Service Awards</div>
       </div>
     </div>
-    <div class="column nature">
-      <div class="content">
-      <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-        <h4>Forest</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
     
-    <div class="column cars">
-      <div class="content">
-        <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-        <h4>Retro</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-    <div class="column cars">
-      <div class="content">
-      <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-        <h4>Fast</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-    <div class="column cars">
-      <div class="content">
-      <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-        <h4>Classic</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-  
-    <div class="column people">
-      <div class="content">
-        <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-        <h4>Girl</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-    <div class="column people">
-      <div class="content">
-      <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-        <h4>Man</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
-    <div class="column people">
-      <div class="content">
-      <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-        <h4>Woman</h4>
-        <p>Lorem ipsum dolor..</p>
-      </div>
-    </div>
   <!-- END GRID -->
   </div>
   
