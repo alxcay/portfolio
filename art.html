@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Art</title>
+
+<link rel="stylesheet" href="./style.css">
+
+<link rel="stylesheet" href="https://use.typekit.net/fbt8vdb.css">
+
+<link rel="stylesheet" href="./sidebarstyle.css">
+
+<!-- <link rel="stylesheet" href="./imagestyle.css"> -->
+
+</head>
+<body>
+  <!-- <div class="square"></div> -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  
+  
+  
+
+      
+
+
+    <div id="mySidebar" class="sidebar">
+        <br>
+        <br>
+        <a href="aboutme.html#">ABOUT ME</a>
+        <br>
+        <a href="portfolio.html#">PORTFOLIO</a>
+        <br>
+        <a href="art.html">Digital Art</a>
+        <br>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+    <div id="main">
+    <a class="McButton" data="hamburger-menu" id="McButton">
+        <b></b>
+        <b></b>
+        <b></b>
+      </a>
+      </div>
+    
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
+
+<!-- Sidebar Functionality -->
+<script>
+
+var isOpen = false;
+
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  isOpen = true;
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  isOpen = false;
+}
+
+var btn = document.getElementById('McButton');
+
+btn.addEventListener('click', function() {
+  if (isOpen) {
+    closeNav();  
+  } else {
+    openNav();
+  }
+}, false);
+
+  </script>
+
+
+<!-- Gallery Style -->
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 0px;
+  margin-top: 0px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  
+  filter: drop-shadow(0px 0px .6rem #8d8d8d);
+    transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+  padding: 0;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.content img {
+    object-fit: cover;
+    display: block;
+    transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+}
+
+.content:hover {
+    
+    filter: drop-shadow(0 0 .6rem #787878);
+    /* opacity: .5; */
+  }
+
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-family:'Bebas Neue', cursive;
+  font-size: 28px;
+  border-radius: 30px;
+}
+
+.centered {
+  position: absolute;
+  display: inline;
+  text-align: center;
+  width: 100%;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family:'Bebas Neue', cursive;
+  font-weight: 700;
+  color: #626262;
+  transition: all .3s ease-in-out;
+    animation: pop-in 0.5s;
+    -webkit-animation:pop-in 0.5s;
+    -moz-animation:pop-in 0.5s;
+    -ms-animation:pop-in 0.5s;
+  opacity: 0;
+}
+
+
+
+.content:hover .centered{
+  color: white;
+  font-size:31px;
+  opacity: 1;
+}
+
+.content:hover img{
+  transform: scale(1.1);
+  opacity: 0.5;
+
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+<!-- modal styling -->
+
+<style>
+
+#myImg:hover {opacity: 0.7;}
+
+#myImg2:hover {opacity: 0.7;}
+
+#myImg3:hover {opacity: 0.7;}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  
+  /* max-width: 700px; */
+}
+
+.donutvid {
+  margin: auto;
+  display: block;
+  width: 30% !important;
+  
+}
+
+
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 70px;
+  font-weight:100;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 70px;
+  font-weight:100;
+  transition: 0.3s;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close3 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 70px;
+  font-weight:100;
+  transition: 0.3s;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+</style>
+<!-- MAIN (Center website) -->
+
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div id="img01container">
+  <img class="modal-content" id="img01" src="couch.png" style="z-index: 99">
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <span class="close2">&times;</span>
+  <img class="modal-content" id="img02" src="chair.png" style="width:50%">
+
+</div>
+
+<div id="myModal3" class="modal" width="30%" !important>
+  <span class="close3">&times;</span>
+  <div style="text-align: center">
+  <video width="30%"!important autoplay loop class="modal-content" id="donutvid">
+    <source src="donut.mov" type="video/mp4">
+  </video>
+</div>
+  <img class="modal-content" id="img03" src="donut.png" style="width:50%">
+  
+  <!-- <img class="modal-content" id="img04" src="chair.png" style="width:50%"> -->
+
+</div>
+
+<div class="main">
+
+  
+  
+  
+  <div id="myBtnContainer">
+    <button class="btn active" style="margin-left: 60px" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('cad')"> CAD & Renders</button>
+    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('people')"> People</button>
+  </div>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row" style="margin-top:20px">
+    <div class="column cad cars">
+      <div class="content">
+        
+        <img src="couchwebthumb.png" alt="Couch" style="width:100%" id="myImg">
+      
+      </div>
+    </div>
+    <div class="column cad cars">
+      <div class="content">
+        
+        <img src="chairwebthumb.png" alt="Chair" style="width:100%" id="myImg2">
+      
+      </div>
+    </div>
+
+    <div class="column cad cars">
+      <div class="content">
+        
+        <img src="donut.png" alt="Donut" style="width:100%" id="myImg3">
+      
+      </div>
+    </div>
+    
+  <!-- END GRID -->
+  </div>
+  
+  <!-- END MAIN -->
+  </div>
+  
+  <script>
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = modalImg.src;
+      document.getElementById("McButton").style.pointerEvents = "none";
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+      document.getElementById("McButton").style.pointerEvents = "initial";
+    }
+
+    var modal = document.getElementById('myModal');
+    modal.addEventListener('click',function(){
+      if (this !== document.getElementById("img01")) {
+        this.style.display="none";
+        document.getElementById("McButton").style.pointerEvents = "initial";
+
+      }
+    })
+
+//     document.addEventListener('click', function(event) {
+//     // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+//    if (document.getElementById("myModal").style.display == "block"){
+//     if (
+      
+//       !event.target.closest("img01")
+//     ) {
+//       closeModal()
+//     }
+//   }
+//   },
+//   false
+// )
+
+// function closeModal() {
+//   document.getElementById("myModal").style.display = "none"
+// }
+
+    
+    $(document).keydown(function(event) { 
+      if (event.keyCode == 27) { 
+        $('#myModal').hide();
+        document.getElementById("McButton").style.pointerEvents = "initial";
+      }
+    });
+    </script>
+
+<script>
+
+  // Get the modal
+  var modal2 = document.getElementById("myModal2");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img2 = document.getElementById("myImg2");
+  var modalImg2 = document.getElementById("img02");
+  img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = modalImg2.src;
+    document.getElementById("McButton").style.pointerEvents = "none";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span2 = document.getElementsByClassName("close2")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span2.onclick = function() { 
+    modal2.style.display = "none";
+    document.getElementById("McButton").style.pointerEvents = "initial"
+  }
+
+  // When user clicks outside of img close
+  var modal2 = document.getElementById('myModal2');
+  modal2.addEventListener('click',function(){
+    if (this != document.getElementById("img02")) {
+      this.style.display="none";
+      document.getElementById("McButton").style.pointerEvents = "initial"
+
+    }
+  })
+
+  
+  $(document).keydown(function(event) { 
+    if (event.keyCode == 27) { 
+      $('#myModal2').hide();
+      document.getElementById("McButton").style.pointerEvents = "initial"
+    }
+  });
+  </script>
+
+<script>
+
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img3 = document.getElementById("myImg3");
+  var modalImg3 = document.getElementById("img03");
+  img3.onclick = function(){
+    modal3.style.display = "block";
+    modalImg3.src = modalImg3.src;
+    document.getElementById("McButton").style.pointerEvents = "none";
+  }
+  
+  // Get the <span> element that closes the modal
+  var span3 = document.getElementsByClassName("close3")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span3.onclick = function() { 
+    modal3.style.display = "none";
+    document.getElementById("McButton").style.pointerEvents = "initial"
+  }
+
+  // When user clicks outside of img close
+  var modal3 = document.getElementById('myModal3');
+  modal3.addEventListener('click',function(){
+    if (this != document.getElementById("img03")) {
+      this.style.display="none";
+      document.getElementById("McButton").style.pointerEvents = "initial"
+
+    }
+  })
+
+  
+  $(document).keydown(function(event) { 
+    if (event.keyCode == 27) { 
+      $('#myModal3').hide();
+      document.getElementById("McButton").style.pointerEvents = "initial"
+    }
+  });
+  </script>
+
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+<script>
+//hover over mcbutton
+$(function() {
+  $('#McButton').hover(function() {
+    $('#McButton b').css('background-color', '#696868');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('#McButton b').css('background-color', 'black');
+  });
+});
+
+</script>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+@keyframes fadeEffect { /* from 0 to full opacity */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.maintext {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    }
+
+
+
+
+</style>
+
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Scroll to 0,0 and Element hide initiation -->
+    
+    
+    <!-- Element FadeIN on Scroll + INCREASE SIZE -->
+    
+
+</body>
+</html>

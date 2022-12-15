@@ -27,7 +27,7 @@
         <br>
         <a href="portfolio.html">PORTFOLIO</a>
         <br>
-        <a href="#">PERSONAL</a>
+        <a href="art.html">DIGITAL ART</a>
         <br>
         <a href="contact.html">CONTACT</a>
       </div>
@@ -93,13 +93,15 @@ btn.addEventListener('click', function() {
   top: 200%;
 
   display: inline-flex;
-  white-space: nowrap;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
+  width: 100%;
 
   animation: fadeEffect 3s;
+
+  text-align: center;
   /* opacity: 0; */
 }
 
@@ -112,11 +114,12 @@ btn.addEventListener('click', function() {
   top: 240%;
 
   display: inline-flex;
-  white-space: nowrap;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
+
+  width:100%;
 
   animation: fadeEffect 3s;
 }
@@ -383,26 +386,17 @@ $(function() {
     <div id="floatcontainer" class="float-container">
 
       <div id="ic" class="float-child">
-        <div class="green">i see the</div>
-      </div>
-      
-      <div class="float-child">
-        <div id="bigpic" class="blue">big picture</div>
-      </div>
-      <div class="float-child">
-        <div id="dot1" class="blue">.</div>
-      </div>
-      <div class="float-child">
-        <div id="dot2" class="blue">.</div>
-      </div>
-      <div class="float-child">
-        <div id="dot3" class="blue">.</div>
+        <div>i see the <span id="bigpic" class="blue">big picture</span><span id="dot1">.</span><span id="dot2">.</span><span id="dot3">.</span></div>
       </div>
       
     </div>
 
     <div id="floatcontainer2" >
 
+      <div class="float-child">
+        <span id="dot4">.</span><span id="dot5">.</span><span id="dot6">.</span><span id="aswellas">as well as the</span><span id="smalldet">small details.</span>
+      </div>
+<!-- 
       <div class="float-child">
         <div id="dot4" class="blue">.</div>
       </div>
@@ -418,7 +412,7 @@ $(function() {
       <div id="smalldet" class="float-child">
         <div class="blue">small details.</div>
       </div>
-      
+       -->
     </div>
 
     </div>
