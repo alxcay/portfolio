@@ -23,36 +23,16 @@
   
   
   <div class="parallax" id="mainscroll">
+
     <div id="group1" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <img src="AboutMe.png" id="mepic" alt="me:)">
-        <!-- <p id="intro">I believe that a good designer understands the importance of <em class="highlight">telling a story.</em> Design is about understanding the <em class="highlight">emotions</em> that a product or service elicits. It pushes the boundaries of what was previously the status quo in order to <em class="highlight">improve the lives of others.</em> A good designer understands that needs vary across <em class="highlight">cultures</em> and that the needs of the user may not reflect the needs of the designer. -->
-
+        <img src="AboutMe.png" id="mepic" alt="me:)" style="z-index: -999999;">
       </div>
-      <!-- <div class="parallax__layer parallax__layer--base" id="frontpic">
-      <img src="AboutME2.png" id="mepic2" alt="me:)">
-    </div> -->
     </div>
 
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--front">
-        <div id="title">Hey there,<br> I'm Alex.</div>
-        <!-- <div id="skills">ski<br>lls</div> -->
-        
-        <!-- <img src="htmlbutton.png" id="button1" style="z-index: 99;"> -->
-        
-        <div class="con">
-          <div id="backgroundsquare"></div>
-        <div class="con-tooltip left">
-          <p>  </p>
-          <div class="tooltip ">
-            <p>Left</p>
-          </div>
-        </div>
-    
-        </div>
-        <!-- <div class="square"></div> -->
-        
+        <div id="title">Hey there,<br> I'm Alex.</div> 
       </div>
       </div>
 
@@ -68,20 +48,11 @@
             My passions include cooking, film-making and digital modeling/art. I love to travel and hope to explore new continents and cultures in the near future.</div>
         </div>
       </div>
+    </div>
       
   </div>
-      </div>
 
-      <script>
-        
-      //   document.querySelector('#mainscroll').addEventListener('scroll', function() {
-      //   //console.log(this.scrollTop);
-      //   if (this.scrollTop>1000) {
-      //       // document.getElementById("button1").style.display = "block";
-      //       // console.log(this.scrollTop)
-      //       // document.getElementById("button1").style.opacity = 1;
-      //   } 
-      //  });
+    <script>
 
 
        document.querySelector('#mainscroll').addEventListener('scroll', function() {
@@ -101,12 +72,7 @@
                 
                 }
         }
-          // document.getElementById("mystory").style.display = "block";
-          
-        
-        
-          // document.getElementById("mystory").style.animation = "fadeoutEffect .5s";
-          // document.getElementById("mystory").style.opacity = "0";
+      
         
        );
 
@@ -117,23 +83,6 @@
       
       <style>
 
-        .highlight{
-        background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff43);
-        margin: -2px -6px;
-        padding:  2px  6px;
-        font-style: normal;
-        }
-
-        .con {
-          position:relative;
-          left: 30%;
-          top: 500%;
-          z-index: 99;
-          display: inline-flexbox;
-        }
-
-        
-
         #storycontainer{
           padding-left: 0;
           margin-left: 0px;
@@ -142,16 +91,11 @@
           margin: 0;
           padding: 0;
           position: absolute;
-          
           top: 130%;
           left:0;
           padding:0;
-          
           }
           
-
-  
-      
 
         #mystory {
         position:static;
@@ -159,31 +103,18 @@
         padding: 0;
         margin: 0;
         margin-bottom: -4vmin;
-        
         vertical-align: text-bottom;
-        
-        
-        /* top:800px; */
         text-align: left;
         font-family: 'Bebas Neue', cursive;
-        
         padding: 0px;
         margin-left: 0px;
         padding-left: 70px;
         padding-bottom:0;
-        
         text-shadow: 0 -2px 10px rgba(56, 54, 54, 0.86);
-        
         opacity: 0;
-       
-       
-
-      
         color: #2A9D8F;
-
-        
-       
       }
+
 
       #storytext{
         font-family: 'Libre Baskerville';
@@ -191,14 +122,9 @@
         font-size: 30px;
         position:static;
         margin-top:0;
-        
-        
         width: 100%;
         background-color: #E9C46A;
-
         color: white;
-        
-        
         box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.86);
         border-radius: 0px 60px 60px 0px;
         line-height: 40px;
@@ -206,13 +132,12 @@
         padding-left: 70px;
         padding-bottom: 40px;
         padding-right: 70px;
-      
-        
       }
         
         body{
            overflow: hidden; /*Hide scrollbars */
         }
+
         .parallax {
         height: 500px; /* fallback for older browsers */
         height: 100vh;
@@ -248,14 +173,14 @@
   .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    z-index: 3;
+    z-index: -999;
     
   }
 
   .parallax__layer--front {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
-    z-index: 4;
+    z-index: 9999;
     top: 75%;
     left: 33%;
     width:70%
@@ -272,6 +197,13 @@
     z-index: 9999;
     transform: translateY(-200%);
     -webkit-transform: translateY(-200%);
+    
+  }
+
+  #group1 {
+    z-index: -9999;
+    /* transform: translateY(-200%); */
+    /* -webkit-transform: translateY(-200%); */
     
   }
   
@@ -401,7 +333,7 @@ btn.addEventListener('click', function() {
     text-align: right;
     white-space: nowrap;
     color:black;  
-    
+    z-index: 99999 !important;
     
   }
 
@@ -564,7 +496,7 @@ transform: rotate(-90deg);
     left: 10%;
     width: 28vmax;
     filter: drop-shadow(0px 0px 10vmin #a4a4a4);
-    
+    z-index:-99
 
   }
 

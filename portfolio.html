@@ -86,8 +86,14 @@ btn.addEventListener('click', function() {
 <!-- Gallery Style -->
 <style>
 
+
 * {
   box-sizing: border-box;
+  -webkit-transform: translate3d(0,0,1px);
+        -moz-transform: translate3d(0,0,1px);
+         -ms-transform: translate3d(0,0,1px);
+          -o-transform: translate3d(0,0,1px);
+             transform: translate3d(0,0,1px);
 }
 
 body {
@@ -136,12 +142,14 @@ h1 {
 .content {
   background-color: white;
   
-  filter: drop-shadow(0px 0px .6rem #8d8d8d);
+  /* filter: drop-shadow(0px 0px .6rem #8d8d8d); */
+  box-shadow: 0 0 .6rem #8d8d8d;
     transition: all .3s ease-in-out;
     animation: pop-in 0.5s;
     -webkit-animation:pop-in 0.5s;
     -moz-animation:pop-in 0.5s;
     -ms-animation:pop-in 0.5s;
+    
   padding: 0;
   opacity: 1;
   position: relative;
@@ -160,7 +168,8 @@ h1 {
 
 .content:hover {
     
-    filter: drop-shadow(0 0 .6rem #787878);
+    /* filter: drop-shadow(0 0 .6rem #787878); */
+    box-shadow: 0 0 .6rem #787878;
     /* opacity: .5; */
   }
 
@@ -238,8 +247,8 @@ h1 {
   <div id="myBtnContainer">
     <button class="btn active" style="margin-left: 60px" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('cad')"> CAD & Renders</button>
-    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-    <button class="btn" onclick="filterSelection('people')"> People</button>
+    <!-- <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('people')"> People</button> -->
   </div>
   
   <!-- Portfolio Gallery Grid -->
