@@ -16,20 +16,107 @@
 <!-- <link rel="stylesheet" href="./imagestyle.css"> -->
 
 </head>
+
+
 <body>
   <!-- <div class="square"></div> -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
   <a class="arrow" href="portfolio.html" ></a>
 
+
   <img src="LFbackground.png" class="bg" alt="back">
 
+  <div id="overview">A team of 12 engineers and designers  led by me explored exactly this. Through 9 months of research, design, development and user-testing, we created a fully custom machine that dispenses educational items not using cash - but a completely new payment system from the ground up.</div>
 
+  <div id="IDcontainer"><img src="ID.png" id="ID" alt="ID"><div>Students earn points by engaging in campus activities, which can be redeemed for educational items.</div></div>
+
+  <div id="overview2">The project was developed in collaboration with Penn State I.T. to allow students to simply use their existing university ID cards.</div>
 
       
       <style>
 
-      
+        #IDcontainer{
+          padding-top: 5%;
+          padding-bottom: 5%;
+          background-color: black;
+          position: static;
+          width: 100%;
+          text-align: right;
+          font-size: 7vw;
+          font-family: 'Bebas Neue', cursive;
+          box-sizing: border-box;
+          padding-right:5%;
+          animation: fade 1s ease-in-out;
+
+        }
+
+        @keyframes fade{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+        #ID{
+          width: 50%;
+          filter: drop-shadow(0px 0px 4px #000000);
+          float: left;
+          
+          animation: enter 1s ease-in-out;
+          animation-fill-mode: forwards;
+          margin-left: -400px;
+          display: none;
+          margin-right: 30%;
+          margin-right: 335px;
+
+        }
+
+        
+
+@keyframes enter{
+  0%{
+    transform: translate(0,0) skew(-10deg) rotateZ(-10deg);
+  }
+  100%{
+    transform: translate(380px,0) skew(5deg) rotateZ(10deg);
+  }
+  
+}
+
+      #overview {
+        position:static;
+        font-size: 10px;
+        display: block;
+        text-align: center;
+        font-size: 10vmin;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: white;
+        margin-top: 0;
+        font-family: 'Bebas Neue', cursive;
+
+      }
+
+      #overview2 {
+        position:static;
+        font-size: 10px;
+        display: block;
+        text-align: center;
+        font-size: 10vmin;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: white;
+        margin-top: 0;
+        font-family: 'Bebas Neue', cursive;
+
+      }
 
       .arrow {
         border: solid white;
@@ -456,6 +543,7 @@ if(isOpen){
   margin-left: 0px;
   margin-right: 0px;
 
+
   animation: fadeEffect 3s;
   /* opacity: 0; */
 }
@@ -586,12 +674,77 @@ if(isOpen){
     
        
     <script>
-      $(window).scroll(example);
+      // $(window).scroll(example);
       
-      function example() {
-        var tempScrollTop = $(window).scrollTop();
-        console.log("Scroll from Top: " + tempScrollTop.toString());
-      };
+      
+      // function example() {
+      //   var tempScrollTop = $(window).scrollTop();
+      //   console.log("Scroll from Top: " + tempScrollTop.toString());
+      //   if (tempScrollTop>1000){
+      //     document.getElementById("ID").style.display = "block"
+      //   }
+      // };
+      //   let IDcontainer = document.getElementById("IDcontainer")
+      // function isvisible(IDcontainer) {
+      //   document.getElementById("ID").style.display = "block"
+      // }
+
+//       function isInViewport(IDcontainer) {
+//         document.getElementById("ID").style.display = "block"
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
+
+      // window.addEventListener("scroll", function() {showFunction()});
+
+      //   function showFunction() {
+      //         let y = 100 + (window.scrollY || window.pageYOffset)/10
+      //         const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+      //         y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
+      //         document.getElementById("IDcontainer").style.color = `rgb(${r}, ${g}, ${b})`
+      //         console.log(y)
+                
+      //           //PUT ARROW HERE!
+      //       } 
+        
+
+      
+
+      window.addEventListener("scroll", function() {elementInViewport()});
+
+var myElement = document.getElementById("IDcontainer");
+
+
+function elementInViewport() {
+
+  var bounding = myElement.getBoundingClientRect();
+  var myElementHeight = myElement.offsetHeight;
+  var myElementWidth = myElement.offsetWidth;
+
+    if (bounding.top >= -myElementHeight 
+        && bounding.left >= -myElementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight/4) {
+
+        // console.log('Element is in the viewport!');
+        document.getElementById("ID").style.display = "block"
+        let y = (100000*(window.scrollY || window.pageYOffset)/(window.innerHeight*window.innerWidth))
+        
+        document.getElementById("IDcontainer").style.color = `rgb(${y}, ${3}, ${252})`
+        // console.log(y)
+        // document.getElementById("IDcontainer").style.display = "block"
+        // console.log(y);
+
+        
+    } else {
+
+      // console.log('Element is NOT in the viewport!');
+    }
+}
     </script>
 
        
