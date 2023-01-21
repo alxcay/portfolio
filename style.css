@@ -19,6 +19,12 @@ body {
   
 }
 
+/* @media only screen and (min-width: 1026px) {
+  .McButton {
+      display: none;
+  }
+} */
+
 .McButton {
   animation: fadeEffect 3s; /* fading effect takes 3s */
 }

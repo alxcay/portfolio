@@ -109,7 +109,25 @@
          
         }
         
-        #storycontainer{
+        /* MOBILE VIEW */
+        @media only screen and (max-width: 1026px) {
+          #storycontainer{
+          padding-left: 0;
+          margin-left: 0px;
+          width: 60%;
+          display: block;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 50%;
+          left:0;
+          padding:0;
+          }
+        }
+
+          /* DESKTOP VIEW */
+        @media only screen and (min-width: 1026px) {
+          #storycontainer{
           padding-left: 0;
           margin-left: 0px;
           width: 60%;
@@ -121,8 +139,12 @@
           left:0;
           padding:0;
           }
+        }
 
-          #contactcontainer{
+          
+        /* MOBILE VIEW */
+        @media only screen and (max-width: 1026px) {
+        #contactcontainer {
           padding-left: 0;
           margin-right: 0px;
           width: 60vw;
@@ -130,13 +152,31 @@
           margin: 0;
           padding: 0;
           position: absolute;
-          top: 670%;
+          top: 600%;
           right:0;
           padding:0;
           float: right;
           }
+        }
 
-          #contact{
+        /* DESKTOP VIEW */
+        @media only screen and (min-width: 1026px) {
+        #contactcontainer {
+          padding-left: 0;
+          margin-right: 0px;
+          width: 60vw;
+          display: block;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 570%;
+          right:0;
+          padding:0;
+          float: right;
+          }
+        }
+
+        #contact{
         position:static;
         font-size: 12vw;
         padding: 0;
@@ -144,7 +184,7 @@
         margin-bottom: -3.5vw;
         vertical-align: text-bottom;
         text-align: right;
-        font-family: 'Abril Fatface', cursive;
+        font-family: 'Bebas Neue', cursive;
         padding: 0px;
         margin-right: 0px;
         padding-right: 0px;
@@ -155,10 +195,12 @@
         white-space: nowrap;
         overflow: hidden; */
         /* text-shadow: 0 -2px 10px rgba(56, 54, 54, 0.86); */
-        color: #2A9D8F;
+        color: rgb(76, 76, 76);
           }
 
-        #mystory {
+          /* MOBILE VIEW */
+        @media only screen and (max-width: 1026px) {
+          #mystory {
         position:static;
         font-size: 12vw;
         padding: 0;
@@ -166,7 +208,33 @@
         margin-bottom: -3.5vw;
         vertical-align: text-bottom;
         text-align: left;
-        font-family: 'Abril Fatface', cursive;
+        font-family: 'Bebas Neue', cursive;
+        padding: 0px;
+        margin-left: 0px;
+        padding-left: 70px;
+        padding-bottom:0;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-word;
+        white-space: nowrap;
+        overflow: hidden;
+        /* text-shadow: 0 -2px 10px rgba(56, 54, 54, 0.86); */
+        opacity: 1;
+        color: rgb(76, 76, 76);;
+        }
+        }
+        
+        /* DESKTOP VIEW */
+        @media only screen and (min-width: 1026px) {
+          #mystory {
+        position:static;
+        font-size: 12vw;
+        padding: 0;
+        margin: 0;
+        margin-bottom: -3.5vw;
+        vertical-align: text-bottom;
+        text-align: left;
+        font-family: 'Bebas Neue', cursive;
         padding: 0px;
         margin-left: 0px;
         padding-left: 70px;
@@ -178,7 +246,8 @@
         overflow: hidden;
         /* text-shadow: 0 -2px 10px rgba(56, 54, 54, 0.86); */
         opacity: 0;
-        color: #2A9D8F;
+        color: rgb(76, 76, 76);;
+        }
         }
 
 
@@ -188,7 +257,7 @@
         position:static;
         margin-top:0;
         width: 100%;
-        background-color: #E9C46A;
+        background-color: #acd9ec;
         color: white;
         box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.86);
         border-radius: 0px 60px 60px 0px;
@@ -206,7 +275,7 @@
         position:static;
         margin-top:0;
         width: 120%;
-        background-color: #E9C46A;
+        background-color: #acd9ec;
         color: white;
         box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.86);
         border-radius: 60px 0px 0px 60px;
