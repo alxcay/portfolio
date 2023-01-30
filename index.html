@@ -16,9 +16,13 @@
 <link rel="stylesheet" href="./sidebarstyle.css">
 
 </head>
+
+
 <body>
 
-    <div id="arrow" class="arrow bounce"></div>
+    <div id="arrow" class="arrow bounce" onclick="topFunction()"></div>
+
+    <button onclick="topFunction()" id="scroller" ></button>
 
     <div id="mySidebar" class="sidebar">
         <br>
@@ -30,12 +34,23 @@
         <a href="art.html">DIGITAL ART</a>
       </div>
 
+
+<div id="mcnavbar"><a href="index.html" id="navtag_mob">AC</a>
+</div>
 <div id="main">
     <a class="McButton" data="hamburger-menu" id="McButton" onclick="toggleNav()">
         <b></b>
         <b></b>
         <b></b>
       </a>
+    </div>
+
+    <div id="navbar">
+      <a href="aboutme.html" id="navtag">About Me</a>
+      <a href="portfolio.html" id="navtag">Portfolio</a>
+      <a href="art.html" id="navtag">Digital Art</a>
+      <a href="index.html" id="name">Alex Cayley</a>
+      
     </div>
     
 
@@ -44,6 +59,14 @@
 
 <!-- Sidebar Functionality -->
 <script>
+  // SCROLL DOWN
+
+
+function topFunction() {
+
+window.scrollTo({top: 400, behavior: 'smooth'});
+
+}
 
 var isOpen = false;
 
@@ -71,14 +94,151 @@ btn.addEventListener('click', function() {
   }
 }, false);
 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    document.getElementById("mcnavbar").style.top = "0";
+    document.getElementById("McButton").style.top = "40px";
+
+
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+    document.getElementById("mcnavbar").style.top = "-80px";
+    document.getElementById("McButton").style.top = "-80px";
+    if (isOpen) {
+    closeNav();
+    McButton.toggleClass("active");
+    McButton.velocity("reverse");
+		McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
+    			.velocity({ top: "100%" }, {duration: 200, easing: "swing"});
+  	McBar1.velocity("reverse", {delay: 800});
+    }
+    
+    // swing();
+
+
+  }
+  prevScrollpos = currentScrollPos;
+
+  
+}
   </script>
 
 <style>
+
+  #scroller{
+    top:90%;
+    width:100px;
+    height:100px;
+    left:48%;
+    position:absolute;
+    z-index:999;
+    opacity:0;
+    cursor: pointer;
+    
+  }
+  
+  #navbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: -80px; /* Stay on top */
+  width: 100%; /* Full width */
+  opacity:1;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index: 99;
+
+}
+
+#McButton{
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+#mcnavbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  height: 70px;
+  margin: 0;
+  left:0;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index:99;
+}
+
+#McButton{
+  z-index:100;
+}
+
+
+/* Style the navbar links */
+#navtag {
+  float:left;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+
+}
+
+#navtag_mob {
+  float:left;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+
+}
+
+/* Style the navbar links */
+#name {
+  float:right;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+}
+
+#navtag:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#name:hover {
+  background-color: #ddd;
+  color: black;
+}
 
   #maintextcontainer {
     scroll-behavior: smooth;
   }
 /*bigpic*/
+
 
 
 
@@ -248,7 +408,7 @@ $(function() {
     $('#McButton b').css('background-color', '#696868');
   }, function() {
     // on mouseout, reset the background colour
-    $('#McButton b').css('background-color', 'black');
+    $('#McButton b').css('background-color', '#6d6d6d');
   });
 });
 
@@ -261,14 +421,34 @@ $(function() {
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
-@keyframes fadeEffect { /* from 0 to full opacity */
+
+@keyframes fadeEffect { 
     from {opacity: 0;}
     to {opacity: 1;}
-}
+} 
 
+/* DESKTOP VIEW */
+@media only screen and (min-width: 1026px) {
+        #McButton {
+          display: none;
+        }
+        #mcnavbar{
+          display: none;
+        }}
 .maintext {
        animation: fadeEffect 3s; /* fading effect takes 3s */
     }
+
+    @media only screen and (max-width: 1026px) {
+        #navbar {
+          display:none;
+          
+        }}
+        
+.maintext {
+       animation: fadeEffect 3s; /* fading effect takes 3s */
+    }
+
 
 #line1 {
 	text-align: center;
@@ -426,7 +606,7 @@ $(function() {
 
         document.getElementById("line2").style.display = "none";
         document.getElementById("line3").style.display = "none";
-        document.getElementById("McButton").style.display = "none";
+        // document.getElementById("McButton").style.display = "none";
         document.getElementById("floatcontainer").style.display = "none";
         document.getElementById("floatcontainer2").style.display = "none";
         document.getElementById("dot1").style.opacity = 0;
@@ -462,13 +642,18 @@ $(function() {
         window.addEventListener("scroll", function() {showburger()});
 
         function showburger() {
+          let width = window.innerWidth;
+          console.log(width)
+          if (width < 1026) {
+
             if ((document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)) {
-              document.getElementById("McButton").style.display = "block";
+              document.getElementById("McButton").style.opacity = 1;
                 
                 //PUT ARROW HERE!
             } else {
                
             }
+          }
         }
 
 
@@ -477,6 +662,7 @@ $(function() {
         function showFunction() {
             if (document.body.scrollTop > h/5 || document.documentElement.scrollTop > h/5) {
                 document.getElementById("line2").style.display = "block";
+                document.getElementById("arrow").style.display="none";
                 
             } else {
                // document.getElementById("toptexts2").style.display = "none";
@@ -487,6 +673,7 @@ $(function() {
         function arrowfunction() {
           opac=document.body.scrollTop;
           opac=document.documentElement.scrollTop;
+          
           if (opacity>0) {
                     opacity = 1/opac;
                     document.getElementById("arrow").style.opacity=opacity;
@@ -796,6 +983,10 @@ $(function() {
 
         function loadAfterTime() { 
             document.getElementById("arrow").style.visibility = "visible";
+            let lock = 0
+            if (lock==0){
+              document.getElementById("navbar").style.top = "0";
+            }
             //$("arrow").fadeOut();
         }
        
@@ -803,20 +994,6 @@ $(function() {
        
     </script>
     
-    <p id="bottom">hi</p>
-    <style>
-      #bottom {
-        text-align: center;
-    position:absolute;
-    top:150%;
-    visibility: hidden;
     
-    left: 0;
-    right: 0;
-    
-    margin: auto;
-
-      }
-    </style>
 </body>
 </html>

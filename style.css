@@ -9,31 +9,31 @@ body {
 .McButton {
   position: fixed;
   top: 40px;
-  left: 40px;
+  right: 18px;
   margin-left: -22px;
   margin-top: -22px;
   width: 44px;
   height: 33px;
   cursor: pointer;
   z-index: 2;
-  
+ 
 }
 
-/* @media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 1026px) {
   .McButton {
       display: none;
   }
-} */
+}
 
 .McButton {
   animation: fadeEffect 3s; /* fading effect takes 3s */
 }
 
 
-@keyframes fadeEffect { /* from 0 to full opacity */
+/* @keyframes fadeEffect { 
 from {opacity: 0;}
 to {opacity: 1;}
-}
+} */
 
 
 .McButton b {
@@ -41,7 +41,7 @@ to {opacity: 1;}
   left: 0;
   width: 44px;
   height: 3px;
-  background-color: black;
+  background-color: #696868;
   
 }
 .McButton b:nth-child(1) {

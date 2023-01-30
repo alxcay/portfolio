@@ -22,7 +22,6 @@
   <!-- <div class="square"></div> -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-  <a class="arrow" href="portfolio.html" ></a>
 
 
   <img src="LFbackground.png" class="bg" alt="back">
@@ -132,7 +131,6 @@
         transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
 
-      mix-blend-mode: difference;
       }
 
       .arrow:hover{
@@ -347,29 +345,26 @@
     line-height: 4vmax;
   }
 
-  .McButton b{
-    background-color: white;
-  }
 
-  .McButton {
-    mix-blend-mode: difference;
-  }
+
+  
   </style>
 
     <div id="mySidebar" class="sidebar">
         <br>
         <br>
-        <a href="aboutme.html">ABOUT ME</a>
+        <a href="aboutme.html" style="color:#e038b0;">ABOUT ME</a>
         <br>
-        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="portfolio.html" style="color:#e038b0;">PORTFOLIO</a>
         <br>
-        <a href="personal.html">PERSONAL</a>
+        <a href="personal.html" style="color:#e038b0;">PERSONAL</a>
         <br>
-        <a href="contact.html">CONTACT</a>
+        <a href="contact.html" style="color:#e038b0;">CONTACT</a>
       </div>
 
 
-    
+      <div id="mcnavbar"><a href="index.html" id="navtag_mob">AC</a>
+      </div>
 
 <div id="main">
     <a class="McButton" data="hamburger-menu" id="McButton">
@@ -378,7 +373,46 @@
         <b></b>
       </a>
     </div>
+
+    <div id="navbar">
+      <a href="aboutme.html" id="navtag">About Me</a>
+      <a href="portfolio.html" id="navtag">Portfolio</a>
+      <a href="art.html" id="navtag">Digital Art</a>
+      <a href="index.html" id="name">Alex Cayley</a>
+      
+    </div>
     
+    <script>/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+          document.getElementById("mcnavbar").style.top = "0";
+          document.getElementById("McButton").style.top = "40px";
+      
+      
+        } else {
+          document.getElementById("navbar").style.top = "-80px";
+          document.getElementById("mcnavbar").style.top = "-80px";
+          document.getElementById("McButton").style.top = "-80px";
+          if (isOpen) {
+          closeNav();
+          McButton.toggleClass("active");
+          McButton.velocity("reverse");
+          McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
+                .velocity({ top: "100%" }, {duration: 200, easing: "swing"});
+          McBar1.velocity("reverse", {delay: 800});
+          }
+          
+          // swing();
+      
+      
+        }
+        prevScrollpos = currentScrollPos;
+      
+        
+      }</script>
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
@@ -401,7 +435,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
-  $('#McButton b').css('background-color', 'white');
+  $('#McButton b').css('background-color', '#e038b0');
   isOpen = false;
   let x = 1
 }
@@ -413,7 +447,7 @@ $(function() {
     $('#McButton b').css('background-color', '#696868');
   }, function() {
     // on mouseout, reset the background colour
-      $('#McButton b').css('background-color', 'white');
+      $('#McButton b').css('background-color', '#e038b0');
   });
 });
 
@@ -427,7 +461,7 @@ btn.addEventListener('click', function() {
     $('#McButton b').css('background-color', '#696868');
   }, function() {
     // on mouseout, reset the background colour
-      $('#McButton b').css('background-color', 'white');
+      $('#McButton b').css('background-color', '#e038b0');
   });
 });
 
@@ -439,7 +473,7 @@ btn.addEventListener('click', function() {
     $('#McButton b').css('background-color', '#696868');
   }, function() {
     // on mouseout, reset the background colour
-      // $('#McButton b').css('background-color', 'black');
+      $('#McButton b').css('background-color', '#e038b0;');
   });
 });
 
@@ -456,8 +490,123 @@ if(isOpen){
 
 <style>
 
-  
+#navbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: 0px; /* Stay on top */
+  width: 100%; /* Full width */
+  opacity:1;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index: 99;
 
+}
+
+#McButton{
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  
+}
+
+#McButton b{
+  background-color: #e038b0;
+}
+
+#mcnavbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  height: 70px;
+  margin: 0;
+  left:0;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index:99;
+}
+
+#McButton{
+  z-index:100;
+}
+
+
+/* Style the navbar links */
+#navtag {
+  float:left;
+  display: block;
+  color: #e038b0;
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+
+}
+
+#navtag_mob {
+  float:left;
+  display: block;
+  color: #e038b0;
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  animation: fadeEffect 3s; /* fading effect takes 3s */
+}
+
+/* Style the navbar links */
+#name {
+  float:right;
+  display: block;
+  color: #e038b0;
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+}
+
+#navtag:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#name:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 1026px) {
+        #McButton {
+          display: none;
+        }
+        #mcnavbar{
+          display: none;
+        }}
+
+
+    @media only screen and (max-width: 1026px) {
+        #navbar {
+          display:none;
+          
+        }
+      .bg{
+        margin-top:60px
+      }
+      }
 
 @keyframes odsoky {
 0%{

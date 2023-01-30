@@ -16,15 +16,10 @@
 <!-- <link rel="stylesheet" href="./imagestyle.css"> -->
 
 </head>
-<body>
-  <!-- <div class="square"></div> -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-  
-  
-  
 
-      
+<body>
 
 
     <div id="mySidebar" class="sidebar">
@@ -37,6 +32,10 @@
         <a href="art.html">Digital Art</a>
       </div>
 
+
+<div id="mcnavbar"><a href="index.html" id="navtag_mob">AC</a>
+</div>
+
     <div id="main">
     <a class="McButton" data="hamburger-menu" id="McButton">
         <b></b>
@@ -45,7 +44,14 @@
       </a>
       </div>
     
-
+<div id="navbar">
+      <a href="aboutme.html" id="navtag">About Me</a>
+      <a href="portfolio.html" id="navtag">Portfolio</a>
+      <a href="art.html" id="navtag">Digital Art</a>
+      <a href="index.html" id="name">Alex Cayley</a>
+      
+    </div>
+    
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script><script  src="./script.js"></script>
 
@@ -78,12 +84,155 @@ btn.addEventListener('click', function() {
   }
 }, false);
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+    document.getElementById("mcnavbar").style.top = "0";
+    document.getElementById("McButton").style.top = "40px";
+
+
+  } else {
+    document.getElementById("navbar").style.top = "-80px";
+    document.getElementById("mcnavbar").style.top = "-80px";
+    document.getElementById("McButton").style.top = "-80px";
+    if (isOpen) {
+    closeNav();
+    McButton.toggleClass("active");
+    McButton.velocity("reverse");
+		McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
+    			.velocity({ top: "100%" }, {duration: 200, easing: "swing"});
+  	McBar1.velocity("reverse", {delay: 800});
+    }
+    
+    // swing();
+
+
+  }
+  prevScrollpos = currentScrollPos;
+
+  
+}
   </script>
 
 
 <!-- Gallery Style -->
 <style>
+#navbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: 0px; /* Stay on top */
+  left:0;
+  width: 100%; /* Full width */
+  opacity:1;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index: 99;
 
+}
+
+#McButton{
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+#mcnavbar {
+  background-color: rgb(236, 236, 236); /* Black*/
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  height: 70px;
+  margin: 0;
+  left:0;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.3);
+  z-index:99;
+  
+}
+
+#McButton{
+  z-index:100;
+}
+
+
+/* Style the navbar links */
+#navtag {
+  float:left;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+
+}
+
+#navtag_mob {
+  float:left;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+
+  
+  animation: fadeEffect 3s; /* fading effect takes 3s */
+
+}
+
+/* Style the navbar links */
+#name {
+  float:right;
+  display: block;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  padding: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+  
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+}
+
+#navtag:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#name:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 1026px) {
+        #McButton {
+          display: none;
+        }
+        #mcnavbar{
+          display: none;
+        }}
+
+/* MOBILE VIEW */
+
+    @media only screen and (max-width: 1026px) {
+        #navbar {
+          display:none;
+          
+        }}
 * {
   box-sizing: border-box;
 }
@@ -180,6 +329,20 @@ h1 {
   font-size: 28px;
   border-radius: 30px;
 }
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 1026px) {
+        .btn {
+            margin-top: 10px;
+        }}
+
+        /* MOBILE VIEW */
+
+
+    @media only screen and (max-width: 1026px) {
+        .btn {
+            margin-top: 30px;
+        }}
 
 .centered {
   position: absolute;
@@ -292,8 +455,8 @@ h1 {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 50px;
+  right: 20px;
   color: #f1f1f1;
   font-size: 70px;
   font-weight:100;
@@ -309,8 +472,8 @@ h1 {
 
 .close2 {
   position: absolute;
-  top: 15px;
-  right: 35px;
+   top: 50px;
+  right: 20px;
   color: #f1f1f1;
   font-size: 70px;
   font-weight:100;
@@ -326,8 +489,8 @@ h1 {
 
 .close3 {
   position: absolute;
-  top: 15px;
-  right: 35px;
+   top: 50px;
+  right: 20px;
   color: #f1f1f1;
   font-size: 70px;
   font-weight:100;
@@ -385,7 +548,7 @@ h1 {
   
   
   <div id="myBtnContainer">
-    <button class="btn active" style="margin-left: 60px" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn active" style="margin-left: -15px" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('cad')"> Renders</button>
     <button class="btn" onclick="filterSelection('cars')"> Painting</button>
     
@@ -619,7 +782,7 @@ $(function() {
     $('#McButton b').css('background-color', '#696868');
   }, function() {
     // on mouseout, reset the background colour
-    $('#McButton b').css('background-color', 'black');
+    $('#McButton b').css('background-color', '#6d6d6d');
   });
 });
 
