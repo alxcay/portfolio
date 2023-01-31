@@ -480,9 +480,11 @@ document.querySelector('#mainscroll').onscroll = function() {
 
 
   } else {
+    if(currentScrollPos>300){
     document.getElementById("navbar").style.top = "-80px";
     document.getElementById("mcnavbar").style.top = "-80px";
     document.getElementById("McButton").style.top = "-80px";
+    }
     if (isOpen) {
     closeNav();
     McButton.toggleClass("active");
