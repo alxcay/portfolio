@@ -18,10 +18,10 @@
 </head>
 
 <div id="navbar">
-  <a href="aboutme.html" id="navtag">About Me</a>
-  <a href="portfolio.html" id="navtag">Portfolio</a>
-  <a href="art.html" id="navtag">Digital Art</a>
-  <a href="index.html" id="name">Alex Cayley</a>
+  <a href="aboutme.html" id="navtag">ABOUT ME</a>
+  <a href="portfolio.html" id="navtag">PORTFOLIO</a>
+  <a href="art.html" id="navtag">DIGITAL ART</a>
+  <a href="index.html" id="name">ALEX CAYLEY</a>
   
 </div>
 
@@ -133,6 +133,13 @@
           padding:0;
           }
 
+          #storytext{
+            font-size: 23px;
+            line-height: 30px;
+            
+
+          }
+
         #navbar {
           display:none;
           
@@ -180,6 +187,8 @@
           }
         }
 
+       
+
         /* DESKTOP VIEW */
         @media only screen and (min-width: 480px) {
         #contactcontainer {
@@ -194,6 +203,12 @@
           right:0;
           padding:0;
           float: right;
+          }
+
+          #storytext{
+            font-size: 40px;
+            line-height: 45px;
+
           }
         }
 
@@ -274,7 +289,7 @@
 
       #storytext{
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 30px;
+        
         position:static;
         margin-top:0;
         width: 100%;
@@ -282,7 +297,6 @@
         color: white;
         box-shadow: 0 -3px 20px rgba(56, 54, 54, 0.86);
         border-radius: 0px 60px 60px 0px;
-        line-height: 40px;
         padding-top: 40px;
         padding-left: 70px;
         padding-bottom: 40px;
@@ -532,8 +546,9 @@ document.querySelector('#mainscroll').onscroll = function() {
   
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 30px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 300;
+    font-size: 35px;
 
 }
 #mcnavbar {
@@ -564,7 +579,8 @@ document.querySelector('#mainscroll').onscroll = function() {
   
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 300;
   font-size: 50px;
   animation: fadeEffect 3s; /* fading effect takes 3s */
 }
@@ -581,8 +597,9 @@ document.querySelector('#mainscroll').onscroll = function() {
   cursor: pointer;
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 30px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 400;
+    font-size: 35px;
 }
 
 #navbar a:hover {
@@ -829,6 +846,8 @@ $(function() {
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300;400&display=swap');
+
 
 @keyframes fadeEffect { /* from 0 to full opacity */
     from {opacity: 0;}

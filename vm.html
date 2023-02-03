@@ -357,7 +357,7 @@
         <br>
         <a href="portfolio.html" style="color:#e038b0;">PORTFOLIO</a>
         <br>
-        <a href="art.html" style="color:#e038b0;">Digital Art</a>
+        <a href="art.html" style="color:#e038b0;">DIGITAL ART</a>
         
       </div>
 
@@ -374,10 +374,10 @@
     </div>
 
     <div id="navbar">
-      <a href="aboutme.html" id="navtag">About Me</a>
-      <a href="portfolio.html" id="navtag">Portfolio</a>
-      <a href="art.html" id="navtag">Digital Art</a>
-      <a href="index.html" id="name">Alex Cayley</a>
+      <a href="aboutme.html" id="navtag">ABOUT ME</a>
+      <a href="portfolio.html" id="navtag">PORTFOLIO</a>
+      <a href="art.html" id="navtag">DIGITAL ART</a>
+      <a href="index.html" id="name">ALEX CAYLEY</a>
       
     </div>
     
@@ -542,8 +542,9 @@ if(isOpen){
   
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 30px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 300;
+    font-size: 35px;
 
 }
 
@@ -558,7 +559,8 @@ if(isOpen){
   
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 300;
   font-size: 50px;
   animation: fadeEffect 3s; /* fading effect takes 3s */
 }
@@ -575,8 +577,9 @@ if(isOpen){
   
   
   text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 30px;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-weight: 400;
+    font-size: 35px;
 }
 
 #navtag:hover {
@@ -782,6 +785,8 @@ if(isOpen){
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300;400&display=swap');
+
 
 @keyframes fadeEffect { /* from 0 to full opacity */
     from {opacity: 0;}
@@ -815,53 +820,13 @@ if(isOpen){
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Scroll to 0,0 and Element hide initiation -->
     
-    
-    <!-- Element FadeIN on Scroll + INCREASE SIZE -->
     
     
     
        
     <script>
-      // $(window).scroll(example);
       
-      
-      // function example() {
-      //   var tempScrollTop = $(window).scrollTop();
-      //   console.log("Scroll from Top: " + tempScrollTop.toString());
-      //   if (tempScrollTop>1000){
-      //     document.getElementById("ID").style.display = "block"
-      //   }
-      // };
-      //   let IDcontainer = document.getElementById("IDcontainer")
-      // function isvisible(IDcontainer) {
-      //   document.getElementById("ID").style.display = "block"
-      // }
-
-//       function isInViewport(IDcontainer) {
-//         document.getElementById("ID").style.display = "block"
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-
-      // window.addEventListener("scroll", function() {showFunction()});
-
-      //   function showFunction() {
-      //         let y = 100 + (window.scrollY || window.pageYOffset)/10
-      //         const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-      //         y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
-      //         document.getElementById("IDcontainer").style.color = `rgb(${r}, ${g}, ${b})`
-      //         console.log(y)
-                
-      //           //PUT ARROW HERE!
-      //       } 
-        
-
       
 
       window.addEventListener("scroll", function() {elementInViewport()});
