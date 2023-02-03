@@ -218,7 +218,7 @@ window.onscroll = function() {
 }
 
 /* DESKTOP VIEW */
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 480px) {
         #McButton {
           display: none;
         }
@@ -228,7 +228,7 @@ window.onscroll = function() {
 
 /* MOBILE VIEW */
 
-    @media only screen and (max-width: 1026px) {
+    @media only screen and (max-width: 480px) {
         #navbar {
           display:none;
           
@@ -264,12 +264,27 @@ h1 {
   margin-top: 0px;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
+
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 480px) {
+       /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          display: none; /* Hide all elements by default */
+        }}
+
+        /* MOBILE VIEW */
+
+
+    @media only screen and (max-width: 480px) {
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          display: none; /* Hide all elements by default */
+        }}
 
 /* Clear floats after rows */ 
 .row:after {
@@ -334,17 +349,19 @@ h1 {
 }
 
 /* DESKTOP VIEW */
-@media only screen and (min-width: 1026px) {
+@media only screen and (min-width: 480px) {
         .btn {
             margin-top: 10px;
+            padding: 12px 50px;
         }}
 
         /* MOBILE VIEW */
 
 
-    @media only screen and (max-width: 1026px) {
+    @media only screen and (max-width: 480px) {
         .btn {
             margin-top: 30px;
+            padding: 12px 30px;
         }}
 
 .centered {
@@ -402,8 +419,8 @@ h1 {
   <div id="myBtnContainer">
     <button class="btn active" style="margin-left: -15px" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" onclick="filterSelection('cad')"> CAD & Renders</button>
-    <!-- <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-    <button class="btn" onclick="filterSelection('people')"> People</button> -->
+    <!-- <button class="btn" onclick="filterSelection('Anthropometrics')"> Human-Centered</button> -->
+    <!-- <button class="btn" onclick="filterSelection('people')"> People</button> -->
   </div>
   
   <!-- Portfolio Gallery Grid -->
@@ -436,7 +453,7 @@ h1 {
       <div class="content" href="arl.pdf">
         <a href="arl.pdf">
       <img src="trophywebthumb.png" alt="Lights" style="width:100%">
-      <div class="centered">Years of Service Awards</div>
+      <div class="centered" style="color:#878787;">Years of Service Awards</div>
     </a>
       </div>
     </div>
